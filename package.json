@@ -1,0 +1,17 @@
+{
+  "name": "alapi-netlify",
+  "version": "1.0.0",
+  "description": "A/L PDF Scraper API with Netlify Functions",
+  "main": "functions/search.js",
+  "type": "module",
+  "scripts": {
+    "start": "netlify dev"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "netlify-cli": "^15.0.0"
+  }
+}
