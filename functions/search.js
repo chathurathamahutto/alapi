@@ -1,5 +1,5 @@
-import axios from "axios";
-import cheerio from "cheerio";
+const axios = require("axios");
+const cheerio = require("cheerio");
 
 const USER_AGENT =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36";
@@ -28,7 +28,7 @@ async function scrapePdfLink(url) {
   }
 }
 
-export async function handler(event) {
+exports.handler = async function (event) {
   const query = event.queryStringParameters.q;
   if (!query) {
     return {
@@ -77,4 +77,4 @@ export async function handler(event) {
       body: JSON.stringify({ error: "Failed to scrape", details: error.message }),
     };
   }
-}
+};
